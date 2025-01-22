@@ -1,7 +1,7 @@
 sources:
   - name: erp
     description: Sistema de vendas da Northwind
-    schema: row_northwind
+    schema: raw_northwind
     database: fea24_11
     tables:
       - name: category

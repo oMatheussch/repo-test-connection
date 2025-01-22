@@ -4,7 +4,7 @@ WITH row_data AS (
     FROM {{ source('erp', 'category')}}
 ),
 
-rename_data AS (
+enrichment_data AS (
     SELECT 
         id as codigo_categoria
         , categoryname as nome_categoria
@@ -13,4 +13,4 @@ rename_data AS (
 )
 
 SELECT *
-FROM rename_data
+FROM enrichment_data
