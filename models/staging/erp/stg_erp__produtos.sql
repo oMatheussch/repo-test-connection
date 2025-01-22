@@ -1,5 +1,11 @@
 WITH row_data AS (
     SELECT 
+        *
+    FROM {{ source('erp', 'products')}}
+),
+
+WITH enrichment_data AS (
+    SELECT 
         id as codigo_produto
         , productname as nome_produto
         , supplierid as codigo_fornecedor
@@ -11,3 +17,6 @@ WITH row_data AS (
         , discontinued as produto_descontinuado
     FROM {{ source('erp', 'products')}}
 )
+
+SELECT *
+FROM enrichment_data
