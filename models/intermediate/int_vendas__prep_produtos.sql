@@ -16,7 +16,6 @@ WITH categorias as (
 , juncao as (
     SELECT 
         codigo_produto
-        ,
     FROM produtos
     LEFT JOIN categorias
         ON produtos.codigo_categoria = categorias.codigo_categoria 

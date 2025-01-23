@@ -5,10 +5,11 @@ WITH raw_data AS (
 
 , enrichment_data AS (
     SELECT 
-        id as codigo_fornecedor
+        ID as codigo_fornecedor
         , companyname as nome_compania
         , contactname as nome_do_contato
         , contacttitle as titulo_do_contato
+        , CONTACTTITLE
         , address as endereco
         , city as cidade
         , region as regiao
@@ -17,6 +18,7 @@ WITH raw_data AS (
         , phone as telefone
         , fax as fax
         , homepage as pagina_inicial
+    FROM raw_data
 )
 
 SELECT *
