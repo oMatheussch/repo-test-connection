@@ -1,10 +1,9 @@
 WITH row_data AS (
-    SELECT 
-        *
+    SELECT *
     FROM {{ source('erp', 'products')}}
-),
+)
 
-WITH enrichment_data AS (
+, enrichment_data AS (
     SELECT 
         id as codigo_produto
         , productname as nome_produto
