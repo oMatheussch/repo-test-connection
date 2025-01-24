@@ -9,7 +9,8 @@ WITH row_data AS (
         , productname as nome_produto
         , supplierid as codigo_fornecedor
         , categoryid as codigo_categoria
-        , quantityperunit as preco_por_unidade
+        , quantityperunit as quantidade_por_unidade
+        , unitprice as preco_por_unidade
         , unitsinstock as unidades_em_estoque
         , unitsonorder as unidades_por_pedidos
         , reorderlevel as nivel_de_pedido
