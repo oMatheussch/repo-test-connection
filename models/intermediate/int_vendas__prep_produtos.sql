@@ -1,16 +1,16 @@
 WITH categorias as (
     SELECT *
-    from {{ __ref('stg_erp__categorias') }}
+    from {{ ref('stg_erp__categorias') }}
 )
 
 , produtos as (
     SELECT *
-    FROM {{ __ref('stg_erp__produtos')}}
+    FROM {{ ref('stg_erp__produtos')}}
 )
 
 , fornecedores as (
     SELECT *
-    FROM {{ __ref('stg_erp__fornecedores')}}
+    FROM {{ ref('stg_erp__fornecedores')}}
 )
 
 , juncao as (
