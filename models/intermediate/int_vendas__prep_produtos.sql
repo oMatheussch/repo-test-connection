@@ -15,10 +15,24 @@ WITH categorias as (
 
 , juncao as (
     SELECT 
-        codigo_produto
+        produtos.codigo_produto
+        , produtos.nome_produto
+        , produtos.quantidade_por_unidade
+        , produtos.preco_por_unidade
+        , produtos.unidades_em_estoque
+        , produtos.unidades_por_pedidos
+        , produtos.nivel_de_pedido
+        , produtos.produto_descontinuado
+        , categorias.nome_categoria
+        , fornecedores.nome_fornecedor
+        , fornecedores.cidade_fornecedor
+        , fornecedores.pais_fornecedor
     FROM produtos
     LEFT JOIN categorias
         ON produtos.codigo_categoria = categorias.codigo_categoria 
     LEFT JOIN fornecedores
         ON produtos.codigo_fornecedor = fornecedores.codigo_fornecedor
 )
+
+SELECT *
+FROM juncao
