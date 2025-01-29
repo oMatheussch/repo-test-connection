@@ -8,7 +8,7 @@ WITH funcionarios as (
         funcionarios.codigo_funcionario
 	    , funcionarios.nome_funcionario
 	    , funcionarios.cargo_funcionario
-	    , funcionarios.codigo_gerente
+        , gerentes.nome_funcionario as nome_gerente
         , funcionarios.data_nascimento
         , funcionarios.data_contratacao
         , funcionarios.cidade_funcionario
@@ -18,3 +18,6 @@ WITH funcionarios as (
     LEFT JOIN funcionarios as gerentes
          ON funcionarios.codigo_funcionario = gerentes.codigo_funcionario
 )
+
+SELECT *
+FROM join_funcionarios
