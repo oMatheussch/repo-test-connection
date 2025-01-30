@@ -4,9 +4,10 @@ models:
     columns:
       - name: codigo_funcionario
         description: Para preencher.
-        data_tests: 
-          - not_null
+        data_tests:
           - unique
+          - not_null
+         
 
 	    - name: nome_funcionario
         description: Para preencher.
