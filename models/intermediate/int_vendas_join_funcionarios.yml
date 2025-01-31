@@ -3,15 +3,15 @@ models:
     description: Modelo que enriquece dados de funcionarios, relacionando o código do seu superior.
     columns:
       - name: codigo_funcionario
-        description: Para preencher.
+        description: Para preencher
         data_tests:
           - unique
           - not_null
-
-	    - name: nome_funcionario
+          
+      - name: nome_funcionario
         description: Para preencher.
 
-	    - name: cargo_funcionario
+      - name: cargo_funcionario
         description: Para preencher.
 
       - name: nome_gerente
