@@ -1,6 +1,6 @@
 WITH row_data AS (
     SELECT *
-    FROM {{ source('erp', 'order_detail')}}
+    FROM {{ source('erp', 'order_details')}}
 )
 
 , enrichment_data AS (
@@ -11,7 +11,7 @@ WITH row_data AS (
 	    , cast(UNITPRICE as float) as preco_unitario
 	    , cast(QUANTITY as float) as quantidade 
 	    , cast(DISCOUNT as float) as disconto
-    FROM {{ source('erp', 'order_detail')}}
+    FROM {{ source('erp', 'order_details')}}
 )
 
 SELECT *
