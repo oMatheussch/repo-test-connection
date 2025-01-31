@@ -1,0 +1,9 @@
+models:
+  - name: int_vendas__metricas_vendas
+    description: Modelo que enriquece dados de vendas.
+    columns:
+      - name: codigo_pedido_produto
+        description: Código do pedido + produto, que deve ser sempre único!
+        data_tests:
+          - unique
+          - not_null
