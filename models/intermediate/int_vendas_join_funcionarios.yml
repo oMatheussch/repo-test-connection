@@ -7,7 +7,6 @@ models:
         data_tests:
           - unique
           - not_null
-         
 
 	    - name: nome_funcionario
         description: Para preencher.
