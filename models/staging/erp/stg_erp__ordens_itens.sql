@@ -10,7 +10,7 @@ WITH row_data AS (
 	    , cast(PRODUCTID as int) as codigo_produto
 	    , cast(UNITPRICE as float) as preco_unitario
 	    , cast(QUANTITY as float) as quantidade 
-	    , cast(DISCOUNT as float) as disconto
+	    , cast(DISCOUNT as float) as desconto
     FROM {{ source('erp', 'order_details')}}
 )
 
