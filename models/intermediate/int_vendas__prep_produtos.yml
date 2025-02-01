@@ -1,0 +1,44 @@
+models:
+  - name: int_vendas__prep_produtos
+    description: Modelo que enriquece dados de produtos com categorias e fornecedores.
+    columns:
+      - name: codigo_produto
+        description: Código do produto, que deve ser sempre único!
+        data_tests:
+          #- unique
+          - not_null
+      
+      - name: nome_produto
+        description: Para preencher.
+      
+      - name: quantidade_por_unidade
+        description: Para preencher. 
+      
+      - name: preco_por_unidade
+        description: Para preencher. 
+      
+      - name: unidades_em_estoque
+        description: Para preencher. 
+      
+      - name: unidades_por_pedidos
+        description: Para preencher. 
+      
+      - name: nivel_de_pedido
+        description: Para preencher. 
+      
+      - name: produto_descontinuado
+        description: Para preencher. 
+      
+      - name: nome_categoria
+        description: Para preencher. 
+      
+      - name: nome_fornecedor
+        description: Nome do fornecedor do produto
+        data_tests:
+          - not_null
+      
+      - name: cidade_fornecedor
+        description: Para preencher.
+      
+      - name: pais_fornecedor
+        description: Para preencher.
