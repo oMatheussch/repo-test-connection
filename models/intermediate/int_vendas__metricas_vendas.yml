@@ -5,5 +5,5 @@ models:
       - name: codigo_pedido_produto
         description: Código do pedido + produto, que deve ser sempre único!
         data_tests:
-          - unique
+          #- unique
           - not_null

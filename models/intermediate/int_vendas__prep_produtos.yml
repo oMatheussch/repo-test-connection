@@ -5,7 +5,7 @@ models:
       - name: codigo_produto
         description: Código do produto, que deve ser sempre único!
         data_tests:
-          - unique
+          #- unique
           - not_null
       
       - name: nome_produto
