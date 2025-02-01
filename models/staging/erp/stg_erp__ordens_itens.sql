@@ -5,7 +5,7 @@ WITH row_data AS (
 
 , enrichment_data AS (
     SELECT 
-        cast(ID as int) as codigo_pedido_produto
+        cast(ID as string) as codigo_pedido_produto
 	    , cast(ORDERID as int ) as codigo_pedido
 	    , cast(PRODUCTID as int) as codigo_produto
 	    , cast(UNITPRICE as float) as preco_unitario

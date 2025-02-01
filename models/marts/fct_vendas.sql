@@ -1,6 +1,6 @@
-WITH fct_vendas AS (
+WITH fct_vendas as (
     SELECT *
-    FROM {{ ref('int_vendas__metricas_vendas') }}
+    FROM {{ref('int_vendas__metricas_vendas')}}
 )
 
 SELECT *
